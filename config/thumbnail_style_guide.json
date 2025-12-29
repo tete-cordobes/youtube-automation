@@ -1,0 +1,73 @@
+{
+  "name": "G33K TEAM Thumbnail Style Guide",
+  "version": "1.0",
+  "last_updated": "2024-12-27",
+  "reference_image": "data/thumbnails/OvE-UR2q4dY.jpg",
+  "reference_episode": "EP 28",
+  "dimensions": {
+    "width": 1280,
+    "height": 720,
+    "aspect_ratio": "16:9"
+  },
+  "style": {
+    "color_palette": {
+      "primary": "warm brown/beige (#D4A574, #C4956A)",
+      "secondary": "tan/orange tones",
+      "background": "warm brown gradient with tech workspace aesthetic",
+      "avoid": ["blue backgrounds", "cold colors", "dark navy"]
+    },
+    "layout": {
+      "top": "G33K TEAM logo centered (G33K in dark/black, TEAM in lighter color)",
+      "middle": "Large topic title + 3 monitors with topic visuals",
+      "bottom_40_percent": "5 cartoon characters in fixed positions"
+    },
+    "characters": {
+      "description": "5 cartoon characters always in same order left to right",
+      "character_1_left": "Bald guy with gray beard and rectangular glasses",
+      "character_2_center_left": "Dark hair, black beard, big smile, brown/tan shirt",
+      "character_3_center": "Bald with glasses and brown beard, plaid shirt",
+      "character_4_center_right": "Headphones, black beard, dark hoodie",
+      "character_5_right": "Young slim guy with glasses and dark hair"
+    },
+    "elements": {
+      "logo": "G33K TEAM at top center",
+      "episode_badge": "EP XX in top right corner (black background, yellow text)",
+      "topic_label": "Orange badge in top left with short topic name",
+      "monitors": "3 screens showing topic-related visual content",
+      "decorative": "Small icons/objects related to episode topic"
+    }
+  },
+  "prompt_template": "Generate a YouTube thumbnail image in the EXACT same visual style as this reference image.\n\nCRITICAL STYLE ELEMENTS TO COPY EXACTLY:\n1. WARM COLOR PALETTE: Beige, brown, orange, tan tones throughout (NOT blue or cold colors)\n2. BACKGROUND: Warm brown/tan gradient with tech workspace aesthetic\n3. LOGO: \"G33K TEAM\" text at top center (G33K in dark/black, TEAM in lighter color)\n4. TITLE: Large white text with black outline showing the main topic in center\n5. MONITORS: 3 computer screens showing topic-related visual content and icons\n6. DECORATIVE ELEMENTS: Small icons/objects related to the episode topic (pizzas, trophies, thermometers, etc.)\n7. 5 CARTOON CHARACTERS at bottom:\n   - Left: Bald guy with gray beard and rectangular glasses\n   - Center-left: Dark hair, black beard, big smile, brown/tan shirt\n   - Center: Bald with glasses and brown beard, plaid shirt\n   - Center-right: Headphones, black beard, dark hoodie\n   - Right: Young slim guy with glasses and dark hair\n\nTOPIC FOR THIS EPISODE: \"{topic}\"\nKEYWORDS: {keywords}\n\nREQUIREMENTS:\n- Size: 1280x720 pixels (16:9)\n- WARM BROWN/ORANGE color scheme like reference (NO blue backgrounds!)\n- TOP area: \"G33K TEAM\" logo centered\n- MIDDLE: Large topic title + monitors with topic visuals:\n{monitors_description}\n- Add decorative elements related to the topic\n- BOTTOM 40%: The EXACT same 5 characters from reference in same positions\n- Flat/cartoon illustration style matching reference\n- DO NOT add \"EP XX\" badge - I will add that separately\n\nGenerate an image that matches the warm brown aesthetic of the reference exactly.",
+  "text_overlays": {
+    "episode_badge": {
+      "position": "top_right",
+      "format": "EP {number:02d}",
+      "font": "Impact or Arial Bold",
+      "font_size": 48,
+      "colors": {
+        "text": "#FFDC00",
+        "outline": "#000000",
+        "background": "rgba(0,0,0,0.78)"
+      }
+    },
+    "topic_label": {
+      "position": "top_left",
+      "max_characters": 25,
+      "font": "Arial Bold",
+      "font_size": 36,
+      "colors": {
+        "text": "#FFFFFF",
+        "outline": "#000000",
+        "background": "rgba(255,140,0,0.9)"
+      }
+    }
+  },
+  "gemini_model": "models/gemini-3-pro-image-preview",
+  "notes": [
+    "Always use EP28 (OvE-UR2q4dY.jpg) as reference - has correct warm brown style",
+    "Never use blue/cold backgrounds",
+    "Characters must always be the same 5 in same positions",
+    "Monitors should show topic-relevant content with icons",
+    "Add decorative elements that match the episode theme"
+  ]
+}
